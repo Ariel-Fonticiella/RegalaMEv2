@@ -20,6 +20,7 @@
       "prefix": "app",
       "styles": [
           "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "../node_modules/angular-calendar/css/angular-calendar.css",
           "assets/sass/paper-kit.scss",
           "assets/css/demo.css",
           "assets/css/nucleo-icons.css"
