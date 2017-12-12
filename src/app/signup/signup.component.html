@@ -18,6 +18,7 @@
                                 </a>
             </div>
 
+            <!--====================== SIGNUP ======================-->
             <form (ngSubmit)="startSignupAjax()" class="register-form">
               <label for="fullname-input">Name</label>
               <input id="fullname-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theUser.fullName" name="fullNameInput" />
@@ -29,6 +30,21 @@
               <input id="password-input" type="password" class="form-control" placeholder="********" [(ngModel)]="theUser.password" name="passwordInput">
               <button class="btn btn-danger btn-block btn-round">Register</button>
             </form>
+            <!--====================== SIGNUP ======================-->
+
+
+
+            <!--====================== LOGIN ======================-->
+            <form (ngSubmit)="startLoginAjax()" class="register-form">
+              <label for="username-input"> Username </label>
+              <input id="username-input" type="text" class="form-control" placeholder="e.g. batman" [(ngModel)]="theUser.username" name="usernameInput" />
+
+              <label for="password-input"> Password </label>
+              <input id="password-input" type="password" class="form-control" placeholder="e.g. *****" [(ngModel)]="theUser.password" name="passwordInput" />
+              <button class="btn btn-danger btn-block btn-round"> Log In </button>
+            </form>
+            <!--====================== LOGIN ======================-->
+
             <div class="forgot">
               <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
             </div>

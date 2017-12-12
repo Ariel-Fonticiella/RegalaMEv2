@@ -9,6 +9,7 @@ export class Gifted {
   relationship:     string;
   image:            string;
   intrest:          string[];
+  birthday:         string;
 
   // these are assigned by the database
   _id:       string;

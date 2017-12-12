@@ -5,6 +5,10 @@ import {
   TemplateRef,
   OnInit } from '@angular/core';
 
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import { GiftedApiService, Gifted } from '../services/gifted-api.service';
+
 import {
   startOfDay,
   endOfDay,
@@ -52,6 +56,7 @@ export class ProfileComponent implements OnInit {
   @ViewChild('modalContent') modalContent: TemplateRef<any>;
 
 
+
     view: string = 'month';
 
     viewDate = new Date();
@@ -83,7 +88,6 @@ export class ProfileComponent implements OnInit {
   events: CalendarEvent[] = [
     {
       start: subDays(startOfDay(new Date()), 1),
-      end: addDays(new Date(), 1),
       title: 'A 3 day event',
       color: colors.red,
       actions: this.actions
@@ -96,7 +100,6 @@ export class ProfileComponent implements OnInit {
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
       title: 'A long event that spans 2 months',
       color: colors.blue
     },
@@ -107,8 +110,8 @@ export class ProfileComponent implements OnInit {
       color: colors.yellow,
       actions: this.actions,
       resizable: {
-        beforeStart: true,
-        afterEnd: true
+      beforeStart: true,
+      afterEnd: true
       },
       draggable: true
     }
@@ -116,7 +119,9 @@ export class ProfileComponent implements OnInit {
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModal) {}
+  constructor(
+    private giftedThang: GiftedApiService,
+    private modal: NgbModal) {}
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
@@ -156,11 +161,37 @@ export class ProfileComponent implements OnInit {
       color: colors.red,
       draggable: true,
       resizable: {
-      beforeStart: true,
-      afterEnd: true
+        beforeStart: true,
+        afterEnd: true
       }
     });
     this.refresh.next();
   }
-  ngOnInit() {}
-};
+
+
+  ngOnInit() {
+
+    this.giftedThang.getGifted()
+      .then((giftedResults: Gifted[]) => {
+
+        const newEvents = [];
+
+        giftedResults.forEach ((oneGifted) => {
+          newEvents.push({
+            start: oneGifted.birthday,
+            title: oneGifted.name,
+            // color: oneGifted.yellow
+          });
+        });
+
+        this.events = newEvents;
+
+      })
+      .catch((err) => {
+          alert("Sorry! Something went wrong.");
+          console.log("Calendar event add Error");
+          console.log(err);
+      });
+
+  }// ngOnInit()
+}

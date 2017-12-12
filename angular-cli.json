@@ -19,11 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-          "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-          "../node_modules/angular-calendar/css/angular-calendar.css",
-          "assets/sass/paper-kit.scss",
-          "assets/css/demo.css",
-          "assets/css/nucleo-icons.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/angular-calendar/css/angular-calendar.css",
+        "assets/sass/paper-kit.scss",
+        "assets/css/demo.css",
+        "assets/css/nucleo-icons.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.slim.min.js",
@@ -60,6 +60,7 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {}
+    "component": {
+    }
   }
 }
