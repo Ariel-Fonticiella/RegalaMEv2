@@ -37,18 +37,12 @@
                         <p class="d-lg-none">Instagram</p>
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://www.github.com" target="_blank">
-                        <i class="fa fa-github"></i>
-                        <p class="d-lg-none">GitHub</p>
-                    </a>
-                </li>
                   <li class="nav-item" *ngIf="!isDocumentation()">
                       <div ngbDropdown class="d-inline-block dropdown">
                           <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Sign Up / Log In</a>
                           <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
                               <a routerLink="/signup" class="dropdown-item">No Account? Sign Up Now!</a>
-                              <a routerLink="#"class="dropdown-item">Have an Account? Log In!</a>
+                              <a routerLink="/login"class="dropdown-item">Have an Account? Log In!</a>
                           </div>
                       </div>
                   </li>
@@ -56,9 +50,7 @@
                     <a [routerLink]="['/home']" *ngIf="!isDocumentation()" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>
                     <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link">Back to Kit</a>
                 </li> -->
-                <li class="nav-item" *ngIf="isDocumentation()">
-                    <a href="https://github.com/creativetimofficial/pk-free-angular/issues?ref=pk2-free-local" target="_blank" class="nav-link">Have an issue</a>
-                </li>
+              
             </ul>
         </div>
     </div>

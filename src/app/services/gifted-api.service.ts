@@ -7,8 +7,9 @@ import { environment } from '../../environments/environment';
 export class Gifted {
   name:             string;
   relationship:     string;
-  image:            string;
   intrest:          string[];
+  priceRange:       string;
+  giftLink:         string;
   birthday:         string;
 
   // these are assigned by the database

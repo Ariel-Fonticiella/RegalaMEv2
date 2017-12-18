@@ -88,6 +88,7 @@ export class ProfileComponent implements OnInit {
   events: CalendarEvent[] = [
     {
       start: subDays(startOfDay(new Date()), 1),
+      end: addDays(new Date(), 1),
       title: 'A 3 day event',
       color: colors.red,
       actions: this.actions
@@ -100,6 +101,7 @@ export class ProfileComponent implements OnInit {
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
+      end: addDays(endOfMonth(new Date()), 3),
       title: 'A long event that spans 2 months',
       color: colors.blue
     },

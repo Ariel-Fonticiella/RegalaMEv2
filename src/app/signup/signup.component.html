@@ -23,27 +23,14 @@
               <label for="fullname-input">Name</label>
               <input id="fullname-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theUser.fullName" name="fullNameInput" />
 
-              <label for="email-input">Email</label>
-              <input id="email-input" type="text" class="form-control" placeholder="Email" [(ngModel)]="theUser.username" name="emailInput">
+              <label for="user-input">Username</label>
+              <input id="user-input" type="text" class="form-control" placeholder="Email" [(ngModel)]="theUser.username" name="usernameInput">
 
-              <label for="password-input">Password</label>
-              <input id="password-input" type="password" class="form-control" placeholder="********" [(ngModel)]="theUser.password" name="passwordInput">
+              <label for="pass-input">Password</label>
+              <input id="pass-input" type="password" class="form-control" placeholder="********" [(ngModel)]="theUser.password" name="passwordInput">
               <button class="btn btn-danger btn-block btn-round">Register</button>
             </form>
             <!--====================== SIGNUP ======================-->
-
-
-
-            <!--====================== LOGIN ======================-->
-            <form (ngSubmit)="startLoginAjax()" class="register-form">
-              <label for="username-input"> Username </label>
-              <input id="username-input" type="text" class="form-control" placeholder="e.g. batman" [(ngModel)]="theUser.username" name="usernameInput" />
-
-              <label for="password-input"> Password </label>
-              <input id="password-input" type="password" class="form-control" placeholder="e.g. *****" [(ngModel)]="theUser.password" name="passwordInput" />
-              <button class="btn btn-danger btn-block btn-round"> Log In </button>
-            </form>
-            <!--====================== LOGIN ======================-->
 
             <div class="forgot">
               <a href="#" class="btn btn-link btn-danger">Forgot password?</a>

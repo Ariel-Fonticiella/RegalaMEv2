@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import {
+  NgbDatepickerModule,
+  NgbTimepickerModule
+} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -26,6 +31,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { GiftedListComponent } from './components/gifted-list/gifted-list.component';
 import { GiftedDetailsComponent } from './components/gifted-details/gifted-details.component';
 import { LoginComponent } from './login/login.component';
 
@@ -39,6 +45,7 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     FooterComponent,
     GiftedDetailsComponent,
+    GiftedListComponent,
     LoginComponent,
   ],
   imports: [
@@ -50,7 +57,9 @@ import { LoginComponent } from './login/login.component';
     HomeModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CalendarModule.forRoot()
+    CalendarModule.forRoot(),
+    NgbDatepickerModule.forRoot(),
+    NgbTimepickerModule.forRoot()
   ],
   providers: [
     UserApiService,
