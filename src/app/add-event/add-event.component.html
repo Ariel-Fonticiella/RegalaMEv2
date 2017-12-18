@@ -5,32 +5,20 @@
       <div class="row">
         <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
           <div class="card card-register">
-            <h3 class="title">Welcome</h3>
-            <div class="social-line text-center">
-              <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
-                                    <i class="fa fa-facebook-square"></i>
-                                </a>
-              <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-              <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-            </div>
-
+            <h3 class="title">Please add new event</h3>
 
             <form (ngSubmit)="startNewEventAjax()" class="register-form">
               <label for="name-input">Name</label>
               <input id="name-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theGifted.name" name="nameInput" />
 
               <label for="start-date-input">Start Date</label>
-              <input id="start-date-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theGifted.birthday" name="startInput" />
+              <input id="start-date-input" type="text" class="form-control" placeholder="e.g. 12/25/2017" [(ngModel)]="theGifted.birthday" name="startInput" />
 
               <label for="relationship-input">Relationship</label>
               <input id="relationship-input" type="text" class="form-control" placeholder="e.g. Wife" [(ngModel)]="theGifted.relationship" name="relationshipInput" />
 
               <label for="interest-input"> Interest </label>
-              <input id="interest-input" type="text" class="form-control" placeholder="e.g. Fishing" [(ngModel)]="theGifted.intrest" name="interestInput" />
+              <input id="interest-input" type="text" class="form-control" placeholder="e.g. Fishing, Hunting, Sleeping" [(ngModel)]="theGifted.intrest" name="interestInput" />
 
               <label for="price-input">Price Range</label>
               <input id="price-input" type="text" class="form-control" placeholder="e.g. $50" [(ngModel)]="theGifted.priceRange" name="priceInput" />
