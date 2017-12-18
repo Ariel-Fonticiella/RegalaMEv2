@@ -3,11 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import {
-  NgbDatepickerModule,
-  NgbTimepickerModule
-} from '@ng-bootstrap/ng-bootstrap';
-
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -57,9 +52,7 @@ import { LoginComponent } from './login/login.component';
     HomeModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CalendarModule.forRoot(),
-    NgbDatepickerModule.forRoot(),
-    NgbTimepickerModule.forRoot()
+    CalendarModule.forRoot()
   ],
   providers: [
     UserApiService,

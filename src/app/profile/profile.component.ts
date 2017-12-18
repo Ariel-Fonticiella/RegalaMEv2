@@ -55,8 +55,6 @@ const colors: any = {
 export class ProfileComponent implements OnInit {
   @ViewChild('modalContent') modalContent: TemplateRef<any>;
 
-
-
     view: string = 'month';
 
     viewDate = new Date();

@@ -17,8 +17,6 @@ const routes: Routes =[
     { path: 'gifted-list',     component: GiftedListComponent },
     { path: 'signup',           component: SignupComponent },
     { path: 'login',           component: LoginComponent },
-    { path: 'landing',          component: LandingComponent },
-    { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
