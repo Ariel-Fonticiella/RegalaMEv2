@@ -24,13 +24,13 @@
               <input id="name-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theGifted.name" name="nameInput" />
 
               <label for="start-date-input">Start Date</label>
-              <input id="start-date-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theGifted.start" name="startInput" />
+              <input id="start-date-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theGifted.birthday" name="startInput" />
 
               <label for="relationship-input">Relationship</label>
               <input id="relationship-input" type="text" class="form-control" placeholder="e.g. Wife" [(ngModel)]="theGifted.relationship" name="relationshipInput" />
 
               <label for="interest-input"> Interest </label>
-              <input id="interest-input" type="text" class="form-control" placeholder="e.g. Fishing" [(ngModel)]="theGifted.interest" name="interestInput" />
+              <input id="interest-input" type="text" class="form-control" placeholder="e.g. Fishing" [(ngModel)]="theGifted.intrest" name="interestInput" />
 
               <label for="price-input">Price Range</label>
               <input id="price-input" type="text" class="form-control" placeholder="e.g. $50" [(ngModel)]="theGifted.priceRange" name="priceInput" />
@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="footer register-footer text-center">
-        <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Ariel Fonticiella</h6>
+        <h6> Made with <i class="fa fa-heart heart"></i> by Ariel Fonticiella. </h6>
       </div>
     </div>
   </div>
