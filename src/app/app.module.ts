@@ -29,6 +29,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { GiftedListComponent } from './components/gifted-list/gifted-list.component';
 import { GiftedDetailsComponent } from './components/gifted-details/gifted-details.component';
 import { LoginComponent } from './login/login.component';
+import { FormsComponent } from './forms/forms.component';
+import { AddEventComponent } from './add-event/add-event.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { LoginComponent } from './login/login.component';
     GiftedDetailsComponent,
     GiftedListComponent,
     LoginComponent,
+    FormsComponent,
+    AddEventComponent,
   ],
   imports: [
     BrowserModule,

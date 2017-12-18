@@ -7,6 +7,8 @@ import { environment } from '../../environments/environment';
 export class User {
   // sign up form
   fullName:  string;
+  avatar: string;
+  email: string;
 
   // sign up & login forms
   username:  string;

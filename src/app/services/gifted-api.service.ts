@@ -33,7 +33,15 @@ export class GiftedApiService {
       ).toPromise();
 }
 
-  // POST   /api/gifted
+    postNewEvent(giftedInfo: Gifted) {
+      return this.httpThang.post(
+        `${environment.backendUrl}/api/gifted`,
+        giftedInfo,
+
+        { withCredentials: true }
+        )
+        .toPromise()
+    }
 
 
   // GET    /api/gifted/:id
@@ -55,4 +63,5 @@ export class GiftedApiService {
         { withCredentials: true }
       ).toPromise();
   }
+
 }

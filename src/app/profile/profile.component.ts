@@ -177,14 +177,17 @@ export class ProfileComponent implements OnInit {
         const newEvents = [];
 
         giftedResults.forEach ((oneGifted) => {
-          newEvents.push({
-            start: oneGifted.birthday,
+          const calendarEvent = {
+            start: new Date(oneGifted.birthday),
             title: oneGifted.name,
-            // color: oneGifted.yellow
-          });
+            color: colors.yellow
+          };
+          calendarEvent.start.setFullYear(new Date().getFullYear());
+          newEvents.push(calendarEvent);
         });
 
         this.events = newEvents;
+        this.refresh.next();
 
       })
       .catch((err) => {

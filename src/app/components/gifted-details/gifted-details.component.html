@@ -1,3 +1,26 @@
+<h2> Gifted Details </h2>
+
+<h3> {{ giftedInfo.name }} </h3>
+
 <p>
-  gifted-details works!
+  Relationship: {{ giftedInfo.relationship }}
 </p>
+
+<p>
+  Interest: {{ giftedInfo.intrest }}
+</p>
+
+
+<h3> Gift Idea </h3>
+
+<ul>
+  <li *ngFor="let oneGift of giftedInfo.giftLink">
+    {{ oneGift }}
+  </li>
+</ul>
+
+<h3> Danger Zone </h3>
+
+<button *ngIf="giftedInfo._id" (click)="startDeleteAjax()">
+  Delete This Person
+</button>

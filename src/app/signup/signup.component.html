@@ -24,7 +24,10 @@
               <input id="fullname-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theUser.fullName" name="fullNameInput" />
 
               <label for="user-input">Username</label>
-              <input id="user-input" type="text" class="form-control" placeholder="Email" [(ngModel)]="theUser.username" name="usernameInput">
+              <input id="user-input" type="text" class="form-control" placeholder="e.g. Afont132" [(ngModel)]="theUser.username" name="usernameInput">
+
+              <label for="email-input"> Email Address </label>
+              <input id="email-input" type="email" class="form-control" placeholder="e.g. jon@winterfell.com" [(ngModel)]="theUser.email" name="usernameEmail" />
 
               <label for="pass-input">Password</label>
               <input id="pass-input" type="password" class="form-control" placeholder="********" [(ngModel)]="theUser.password" name="passwordInput">
