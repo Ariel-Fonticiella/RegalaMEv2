@@ -14,7 +14,7 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
-    { path: 'gifted',     component: GiftedListComponent },
+    { path: 'gifted-list',     component: GiftedListComponent },
     { path: 'signup',           component: SignupComponent },
     { path: 'login',           component: LoginComponent },
     { path: 'landing',          component: LandingComponent },
