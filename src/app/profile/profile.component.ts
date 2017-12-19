@@ -95,7 +95,7 @@ export class ProfileComponent implements OnInit {
   constructor(
     private giftedThang: GiftedApiService,
     private modal: NgbModal,
-    private userThang: UserApiService,
+    public userThang: UserApiService,
     private routerThang: Router
   ) {}
 
