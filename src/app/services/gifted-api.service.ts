@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 export class Gifted {
   name:             string;
   relationship:     string;
-  intrest:          string[];
+  interest:          string[];
   priceRange:       string;
   giftLink:         string;
   birthday:         string;
