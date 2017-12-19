@@ -11,7 +11,7 @@ import { UserApiService, User } from '../services/user-api.service';
 })
 export class FormsComponent implements OnInit {
 
-  
+
 
   constructor(
     private userThang: UserApiService,
@@ -19,6 +19,12 @@ export class FormsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.userThang.getCheckLogin()
+      .catch((err) => {
+        alert("Sorry! Something Went Wrong.");
+        console.log("Check Login Error");
+        console.log(err);
+      });
   }
 
 }
