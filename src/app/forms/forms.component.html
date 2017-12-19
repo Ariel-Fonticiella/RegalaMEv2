@@ -9,18 +9,14 @@
 
             <!--====================== EDIT PROFILE ======================-->
 
-            <form class="register-form" method="post" action="/forms" enctype="multipart/form-data">
-              <label for="avatar-input"> Change Your Avatar </label>
-              <input id="avatar-input" type="file" name="editAvatar" />
+              <label for="name-edit">Name</label>
+              <input id="name-edit" type="text" class="form-control" [(ngModel)]="theUser.name" name="nameInput" />
 
-              <label for="full-name-input"> Full Name </label>
-              <input id="full-name-input" type="text" placeholder="e.g. Khal Drogo" name="editFullName" value="" />
+              <label for="start-date-input">Start Date</label>
+              <input id="start-date-input" type="text" class="form-control" placeholder="e.g. 12/25/2017" [(ngModel)]="theGifted.birthday" name="startInput" />
 
-              <label for="username-input"> Username </label>
-              <input id="username-input" type="text" placeholder="e.g. Khal Drogo" name="editUsername" value="" />
+              <button class="btn btn-danger btn-block btn-round"> Submit </button>
 
-              <button class="btn btn-danger btn-block btn-round">Save</button>
-            </form>
             <!--====================== EDIT PROFILE ======================-->
 
           </div>

@@ -5,9 +5,12 @@ import {
   TemplateRef,
   OnInit } from '@angular/core';
 
+import { Router } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { GiftedApiService, Gifted } from '../services/gifted-api.service';
+import { UserApiService } from '../services/user-api.service';
+
 
 import {
   startOfDay,
@@ -60,8 +63,9 @@ export class ProfileComponent implements OnInit {
     viewDate = new Date();
 
     modalData: {
-    action: string;
-    event: CalendarEvent;
+      action: string;
+      event: CalendarEvent;
+      gifted?: Gifted;
     };
 
     actions: CalendarEventAction[] = [
@@ -83,45 +87,17 @@ export class ProfileComponent implements OnInit {
 
   refresh: Subject<any> = new Subject();
 
-  events: CalendarEvent[] = [
-    {
-      start: subDays(startOfDay(new Date()), 1),
-      end: addDays(new Date(), 1),
-      title: 'A 3 day event',
-      color: colors.red,
-      actions: this.actions
-    },
-    {
-      start: startOfDay(new Date()),
-      title: 'An event with no end date',
-      color: colors.yellow,
-      actions: this.actions
-    },
-    {
-      start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
-      title: 'A long event that spans 2 months',
-      color: colors.blue
-    },
-    {
-      start: addHours(startOfDay(new Date()), 2),
-      end: new Date(),
-      title: 'A draggable and resizable event',
-      color: colors.yellow,
-      actions: this.actions,
-      resizable: {
-      beforeStart: true,
-      afterEnd: true
-      },
-      draggable: true
-    }
-  ];
+  events: CalendarEvent[] = [];
+  gifted: Gifted[] = [];
 
   activeDayIsOpen: boolean = true;
 
   constructor(
     private giftedThang: GiftedApiService,
-    private modal: NgbModal) {}
+    private modal: NgbModal,
+    private userThang: UserApiService,
+    private routerThang: Router
+  ) {}
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
@@ -149,7 +125,18 @@ export class ProfileComponent implements OnInit {
   }
 
   handleEvent(action: string, event: CalendarEvent): void {
+    //take the event parameter
+    // filter for it in my gifted results (title === name)
+    //router.navigate(filteredGiftedResults.id)
+
     this.modalData = { event, action };
+
+    this.gifted.forEach((oneGifted) => {
+        if (oneGifted.event === event) {
+            this.modalData.gifted = oneGifted;
+        }
+    });
+
     this.modal.open(this.modalContent, { size: 'lg' });
   }
 
@@ -173,9 +160,10 @@ export class ProfileComponent implements OnInit {
 
     this.giftedThang.getGifted()
       .then((giftedResults: Gifted[]) => {
+        this.gifted = giftedResults;
 
         const newEvents = [];
-
+//gifted results is my results from DB
         giftedResults.forEach ((oneGifted) => {
           const calendarEvent = {
             start: new Date(oneGifted.birthday),
@@ -184,6 +172,7 @@ export class ProfileComponent implements OnInit {
           };
           calendarEvent.start.setFullYear(new Date().getFullYear());
           newEvents.push(calendarEvent);
+          oneGifted.event = calendarEvent;
         });
 
         this.events = newEvents;

@@ -16,6 +16,7 @@ export class Gifted {
   _id:       string;
   createdAt: string;
   updatedAt: string;
+  event: any;
 }
 
 @Injectable()

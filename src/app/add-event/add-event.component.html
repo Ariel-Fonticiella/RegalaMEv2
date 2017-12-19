@@ -7,6 +7,8 @@
           <div class="card card-register">
             <h3 class="title">Please add new event</h3>
 
+            <!--====================== ADD EVENT ======================-->
+
             <form (ngSubmit)="startNewEventAjax()" class="register-form">
               <label for="name-input">Name</label>
               <input id="name-input" type="text" class="form-control" placeholder="e.g. Dan Marino" [(ngModel)]="theGifted.name" name="nameInput" />
@@ -18,7 +20,7 @@
               <input id="relationship-input" type="text" class="form-control" placeholder="e.g. Wife" [(ngModel)]="theGifted.relationship" name="relationshipInput" />
 
               <label for="interest-input"> Interest </label>
-              <input id="interest-input" type="text" class="form-control" placeholder="e.g. Fishing, Hunting, Sleeping" [(ngModel)]="theGifted.intrest" name="interestInput" />
+              <input id="interest-input" type="text" class="form-control" placeholder="e.g. Fishing, Hunting, Sleeping" [(ngModel)]="theGifted. interest" name="interestInput" />
 
               <label for="price-input">Price Range</label>
               <input id="price-input" type="text" class="form-control" placeholder="e.g. $50" [(ngModel)]="theGifted.priceRange" name="priceInput" />
@@ -27,6 +29,8 @@
               <input id="gift-input" type="text" class="form-control" placeholder="e.g. https://www.amazon.com/gift" [(ngModel)]="theGifted.giftLink" name="giftInput" />
               <button class="btn btn-danger btn-block btn-round"> Submit </button>
             </form>
+
+            <!--====================== ADD EVENT END ======================-->
 
           </div>
         </div>

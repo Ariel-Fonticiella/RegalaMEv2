@@ -51,7 +51,7 @@ export class GiftedDetailsComponent implements OnInit {
     this.giftedThang.deleteOneGifted(this.giftedInfo._id)
       .then(() => {
           // redirect with the Angular router to list of gifted
-          this.routerThang.navigate(['/gifted']);
+          this.routerThang.navigate(['/gifted-list']);
       })
       .catch((err) => {
           alert("Sorry! Something went wrong.");

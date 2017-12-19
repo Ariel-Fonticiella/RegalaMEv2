@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { UserApiService } from '../services/user-api.service';
+import { UserApiService, User } from '../services/user-api.service';
 
 
 @Component({
@@ -10,6 +10,8 @@ import { UserApiService } from '../services/user-api.service';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
+
+  
 
   constructor(
     private userThang: UserApiService,
