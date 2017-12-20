@@ -1,4 +1,4 @@
-# [Paper Kit 2 Angular - Free Bootstrap 4 UI Kit](https://pk2-angular.creative-tim.com/) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
+<!-- # [Paper Kit 2 Angular - Free Bootstrap 4 UI Kit](https://pk2-angular.creative-tim.com/) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
 ![Paper Kit 2 Angular](http://s3.amazonaws.com/creativetim_bucket/products/65/original/opt_pk2_angular_thumbnail.jpg "Paper Kit 2 Angular Free")
 
@@ -38,7 +38,7 @@ Quick start options:
 
 - [Download from Github](https://github.com/creativetimofficial/pk2-angular.git).
 - [Download from Creative Tim](http://www.creative-tim.com/product/paper-kit-2-angular).
-- Clone the repo: `git clone https://github.com/creativetimofficial/pk2-angular.git`.
+- Clone the repo: `git clone https://github.com/creativetimofficial/pk2-angular.git`. -->
 
 
 ### What's included
@@ -154,7 +154,7 @@ pk2-angular
 
 ```
 
-### License
+<!-- ### License
 
 - Copyright 2017 Creative Tim (http://www.creative-tim.com)
 - Licensed under MIT (https://github.com/timcreative/paper-kit/blob/master/LICENSE.md)
@@ -185,4 +185,4 @@ Instagram: <https://instagram.com/creativetimofficial>
 [CHANGELOG]: ./CHANGELOG.md
 [LICENSE]: ./LICENSE.md
 [version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
-[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg -->
